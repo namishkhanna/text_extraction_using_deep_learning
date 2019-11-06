@@ -1,0 +1,2 @@
+cd predict_image
+upload-server

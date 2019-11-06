@@ -1,0 +1,390 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'image/navigation/1.jpg' %}" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title>Computer Vision</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/custom.css' %}" rel="stylesheet">
+
+    <!-- Helper Styles -->
+    <link href="{%static 'css/loaders.css' %}" rel="stylesheet">
+    <link href="{%static 'css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{%static 'css/scroll.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/animation.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nivo-lightbox.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nivo_themes/default/default.css' %}">
+
+    <!-- Font Awesome Style -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="loader loader-bg">
+      <div class="loader-inner ball-clip-rotate-pulse">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    
+
+    <!-- Top Navigation
+      ================================================== -->
+
+      <nav class="navbar navbar-toggleable-md mb-4 top-bar navbar-static-top sps sps--abv">
+          <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'index' %}">Computer<span>Vision</span></a>
+        <div class="collapse navbar-collapse" id="navbarCollapse1">
+          <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"> <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'fileupload' %}">File Upload</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'prediction' %}">Prediction</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#gallery">Image Gallery</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#contact-sec">Contact</a> </li>
+          </ul>
+        </div>
+              </div>
+      </nav>
+      <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+      
+    <!-- Swiper Silder
+        ================================================== --> 
+    <!-- Slider main container -->
+
+    <div class="swiper-container main-slider" id="myCarousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slider-bg-position" style="background:url('/static/image/slide/1.jpg')" data-hash="slide1">
+        </div>
+        <div class="swiper-slide slider-bg-position" style="background:url('/static/image/slide/2.jpg')" data-hash="slide2">
+        </div>
+        <div class="swiper-slide slider-bg-position" style="background:url('/static/image/slide/3.jpeg')" data-hash="slide3">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+      <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+    </div>
+
+
+    <!-- Benefits
+        ================================================== -->
+
+    <section class="service-sec" id="benefits">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading text-md-center text-xs-center">
+          <h2><small>Benefits of Text Extraction</small>If We Want Machines to Think, We need to Teach them to See.</h2>
+        </div>
+            </div>
+          <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-plus" aria-hidden="true"></i>
+              <h3>Text Classification</h3>
+              <p>Text classification is the process of assigning predefined tags or categories to unstructured text. It's considered one of the most useful Natural Language Processing (NLP) techniques because it's so 
+                versatile and can organize, structure and categorize pretty much anything to deliver meaningful data and solve problems.</p>
+            </div>
+            <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-leaf" aria-hidden="true"></i>
+              <h3>Sentiment Analysis</h3>
+              <p>Emotions are essential to effective communication between humans, so if we want machines to handle texts in the same way, we need teach them how to detect emotions and 
+                classify text as positive, negative or neutral.</p>
+            </div>
+            <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-leaf" aria-hidden="true"></i>
+              <h3>Word Frequency</h3>
+              <p>Word frequency can be used to list the most frequently occurring words or concepts in a given text. This can be useful for a number of use cases, for example, to analyze the words or expressions 
+                customers use most frequently in support conversations</p>
+            </div>
+            <div class="col-md-6 text-sm-center service-block"> <i class="fa fa-bell" aria-hidden="true"></i>
+              <h3>Collocation</h3>
+              <p>Collocation helps identify words that commonly co-occur. For example, in customer reviews on a hotel booking website, the words 'air' and 'conditioning' are more likely to co-occur rather than appear individually. </p>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-4"> <img src="{%static 'image/side/1.png' %}" class="img-fluid" height="100%" width="100%"><br><br>
+            <img src="{%static 'image/side/2.png' %}" class="img-fluid" height="100%" width="100%">
+          </div>
+        <!-- /.row --> 
+      </div>
+    </section>
+
+
+    <!-- About 
+        ================================================== -->
+
+    <section class="about-sec parallax-section" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h2><small>Who We Are</small>About<br>
+              Our Website</h2>
+          </div>
+          <div class="col-md-4">
+            <p>The Main Focus of this site is to Convert the image form text into pdf or word form text.</p>
+            <p>The challenge of extracting text from images of documents has traditionally been referred to as Optical Character Recognition (OCR) and has been the focus of much research. When documents are clearly laid out and have global structure
+               (for example, a business letter), existing tools for OCR can perform quite well.
+               A popular open source tool for OCR is the Tesseract Project, which was originally developed by Hewlett-Packard but has been under the care and feeding of Google in recent years. </p>
+          </div>
+          <div class="col-md-4">
+            <p>The field of computer vision aims to extract semantic knowledge from digitized images by tackling challenges such as image classification, object detection, image segmentation, depth estimation, pose estimation, and more. For this 
+              discussion, we’ll focus on the field of object detection (and related image segmentation) which has seen impressive improvements in recent years. </p>
+            <p><a href="#" class="btn btn-transparent-white btn-capsul">Explore More</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BLOG
+        ================================================== -->
+
+    <section class="blog-sec" id="tip">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+        <div class="heading text-md-center text-xs-center">
+          <h2><small>Get Tips and Tricks</small>Our Website</h2>
+        </div>
+        </div>
+          <div class="col-md-4 blog-box">
+            <div class="blog-image-block"> <img src="{%static 'image/tip/1.png' %}" alt="" height='200px' width='100%'> </div>
+            <h3 class="blog-title"><small>Tip 1</small><a href="#">Keep Software Up to Date</a></h3>
+            <p class="blog-content">The biggest problem in incident response is understanding how the business 
+                                    is using its servers, its data, and who has access.</p><br>
+          </div>
+          <div class="col-md-4 blog-box">
+            <div class="blog-image-block"> <img src="{%static 'image/tip/2.jpg' %}" alt="" height='200px' width='100%'> </div>
+            <h3 class="blog-title"><small>Tip 2</small><a href="#">Processing Data Well</a></h3>
+            <p class="blog-content">We should process the data well in order get the better result.</p>
+          </div>
+          <div class="col-md-4 blog-box">
+            <div class="blog-image-block"> <img src="{%static 'image/tip/3.jpg' %}" alt="" height='200px' width='100%'> </div>
+            <h3 class="blog-title"><small>Tip 3</small><a href="#">Choosing the Best parameters</a></h3>
+            <p class="blog-content">We have chossen the best parameters in order to make the accurarcy high.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- VIDEO
+        ================================================== -->
+
+    <section class="video-sec parallax-section">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="wow fadeInUp" data-wow-delay="0.5s">Computer Vision Vs Image Processing</small></h2>
+            <video width="500" controls>
+              <source src="{%static 'image/video/Computer Vision.mp4' %}" type="video/mp4">
+            </video>
+            <small><em>Video by : Our Team</em></small> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- iso section -->
+            <!--
+            <div class="iso-section text-md-center text-xs-center" data-wow-delay="0.5">
+              <ul class="filter-wrapper clearfix">
+                <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
+                <li><a href="#" class="opc-main-bg" data-filter=".london">London</a></li>
+                <li><a href="#" class="opc-main-bg" data-filter=".paris">Paris</a></li>
+                <li><a href="#" class="opc-main-bg" data-filter=".ny">New York</a></li>
+                <li><a href="#" class="opc-main-bg" data-filter=".hn">Hong Kong</a></li>
+              </ul>
+            -->
+
+              <!-- iso box section
+                   ================================================== -->
+
+        <section class="gallery-sec" id="gallery">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+            <div class="heading text-md-center text-xs-center">
+              <h2><small>Story Through Images</small>COMPUTER VISION</h2>
+            </div>
+            </div>
+            <div class="col-md-12"> 
+              <div class="iso-box-section wow fadeInUp" data-wow-delay="0.9s">
+                <div class="iso-box-wrapper col4-iso-box">
+                  <div class="iso-box london paris ny col-md-4 col-sm-6">
+                    <div class="gallery-thumb"> <a href="{%static 'image/gallery/1.png' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/gallery/1.png' %}" class="fluid-img" alt="Gallery">
+                      <div class="gallery-overlay">
+                        <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                      </div>
+                      </a> </div>
+                  </div>
+                  <div class="iso-box london ny hn col-md-4 col-sm-6">
+                    <div class="gallery-thumb"> <a href="{%static 'image/gallery/2.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/gallery/2.jpg' %}" class="fluid-img" alt="Gallery">
+                      <div class="gallery-overlay">
+                        <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                      </div>
+                      </a> </div>
+                  </div>
+                  <div class="iso-box hn col-md-4 col-sm-6">
+                    <div class="gallery-thumb"> <a href="{%static 'image/gallery/3.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/gallery/3.jpg' %}" class="fluid-img" alt="Gallery">
+                      <div class="gallery-overlay">
+                        <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                      </div>
+                      </a> </div>
+                  </div>
+                  <div class="iso-box london col-md-4 col-sm-6">
+                    <div class="gallery-thumb"> <a href="{%static 'image/gallery/4.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/gallery/4.jpg' %}" class="fluid-img" alt="Gallery">
+                      <div class="gallery-overlay">
+                        <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                      </div>
+                      </a> </div>
+                  </div>
+                  <div class="iso-box ny col-md-4 col-sm-6">
+                    <div class="gallery-thumb"> <a href="{%static 'image/gallery/5.png' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/gallery/5.png' %}" class="fluid-img" alt="Gallery">
+                      <div class="gallery-overlay">
+                        <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                      </div>
+                      </a> </div>
+                  </div>
+                  <div class="iso-box paris lunch col-md-4 col-sm-6">
+                    <div class="gallery-thumb"> <a href="{%static 'image/gallery/6.jpg' %}" data-lightbox-gallery="food-gallery"> <img src="{%static 'image/gallery/6.jpg' %}" class="fluid-img" alt="Gallery">
+                      <div class="gallery-overlay">
+                        <div class="gallery-item"> <i class="fa fa-search"></i> </div>
+                      </div>
+                      </a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT
+        ================================================== -->
+
+    <form id="contact" action="{% url 'index' %}" method="POST">
+    <section class="contact-sec" id="contact-sec">
+      <div class="container">
+        <h2>Get in Touch <small>Our work is the presentation of our capabilities.</small> </h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="exampleName" id="exampleName" >Name</label>
+              <input type="text" class="form-control" name="name" id="exampleName" aria-describedby="emailHelp">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="examplePhone">Phone Number</label>
+              <input type="text" class="form-control" name="phone" id="examplePhone" aria-describedby="emailHelp"maxlength="10" pattern="^\d{10}$" required>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="exampleInputEmail">Email address</label>
+              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> </div>
+          </div>
+          <div class="col-md-12">
+            <label for="exampleTextarea">Enter your Message</label>
+            <textarea class="form-control" name="feedback" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          <div class="col-md-12 text-xs-center action-block"> <button type="submit" value="login" class="btn btn-primary" id="formButton" onClick = "myFunction(),this.style.visibility= 'hidden';">Submit</button> </div>
+        </div>
+      </div>
+    </section>
+    {% csrf_token %}
+    </form>
+
+
+    <!-- FOOTER
+        ================================================== -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'index' %}#benefits">Benefits</a></li>
+              <li><a href="{% url 'index' %}#about">About</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="{% url 'index' %}#tip">Tips</a></li>
+              <li><a href="{% url 'index' %}#gallery">Image Gallery</a></li>
+              <li><a href="{% url 'index' %}#contact-sec">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Term and Services</a></li>
+              <li><a href="{% url 'index' %}#about">About Web Security</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>About our Website</h2>
+            <p>Main Focus of this site is to check different attacks which were happening on different sites in order to steal data or to shutdown their website.</p>
+          </div>
+        </div>
+        <div class="row copy-footer">
+          <div class="col-sm-6 col-md-3"> &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> WebAttack.co.in </div>
+          <div class="col-sm-6 col-md-3 pull-right text-xs-right">Created with <i class="fa fa-heart"></i></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+        ================================================== --> 
+    <!-- Placed at the end of the document so the pages load faster --> 
+
+    <script src="{%static 'js/jquery.min.js' %}" ></script> 
+    <script src="{%static 'js/bootstrap.min.js' %}"></script> 
+    <script src="{%static 'js/scrollPosStyler.js' %}"></script> 
+    <script src="{%static 'js/swiper.min.js' %}"></script> 
+    <script src="{%static 'js/isotope.min.js' %}"></script> 
+    <script src="{%static 'js/nivo-lightbox.min.js' %}"></script> 
+    <script src="{%static 'js/wow.min.js' %}"></script> 
+    <script src="{%static 'js/core.js' %}"></script> 
+    <script src="{%static 'js/particles.js' %}"></script>
+    <script src="{%static 'js/scroll.js' %}"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+    <script src="{%static '../../assets/js/ie10-viewport-bug-workaround.js' %}"></script>
+    
+  </body>
+    <script>
+      $("#formButton").click(function(){
+            $("#form1").toggle();
+        });
+    </script>
+    <script>
+    function myFunction() {
+    var x = document.getElementById("infobutton");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+    </script>
+</html>
