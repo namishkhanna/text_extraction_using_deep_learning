@@ -70,3 +70,5 @@
 17. to link css files and images we have to use this syntax '"{%static '_source_' %}"'
 
 18. to link one page to another we have to use this syntax '"{% url '_function_name_' %}"'
+
+19. to run the project, you have to run command 'python manage.py runsever'
