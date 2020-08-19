@@ -53,7 +53,7 @@ files, after that run test.bat file and django project will run on your system.
 13. create 'index.html' file in template folder
 
 14. add this code in template(index.html) 
-   "<!DOCTYPE html>
+   '<!DOCTYPE html>
 	<html>
     		<head>
         		<meta charset="utf-8">
@@ -63,7 +63,7 @@ files, after that run test.bat file and django project will run on your system.
         		<h1>Hello this is index.html</h1>
         		{{insert_me}}
     		</body>
-	</html>"
+	</html>'
 
 15. add this code in app(views.py)
    'from django.shortcuts import render
